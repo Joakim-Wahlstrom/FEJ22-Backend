@@ -1,0 +1,15 @@
+{
+  "name": "5-server",
+  "version": "1.0.0",
+  "description": "En enkel webbserver",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Joakim Wahlström",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
