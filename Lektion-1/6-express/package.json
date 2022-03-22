@@ -1,0 +1,19 @@
+{
+  "name": "6-express",
+  "version": "1.0.0",
+  "description": "En enkel webbserver med express.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "keywords": [],
+  "author": "Joakim",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
