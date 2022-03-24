@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="text-center text-primary border-bottom">
+      <h1>TODOS</h1>
+    </header>
+  
+    <h3 id="noTodosText" class="mt-5 text-center">Start adding something todo</h3>
+  
+    <div id="output" class="pt-5">
+  
+      <!-- <div class="border-bottom">
+        <div class="container d-flex justify-content-between align-items-center px-5 py-2">
+          <p class="h5 m-0">TODO TITLE</p>
+          <i class="fa-solid fa-trash text-danger"></i>
+        </div>
+      </div> -->
+  
+    </div>
+  
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary rounded-circle add" data-bs-toggle="modal" data-bs-target="#addTodo">
+      <i class="fa-solid fa-plus fa-2x"></i>
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="addTodo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Todo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="todoForm">
+            <div class="modal-body">
+              <input type="text" id="todoInput" class="form-control" placeholder="Please enter what todo">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save Todo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
