@@ -1,12 +1,12 @@
 const router = require('express').Router()
+const todoModel = require('../models/todoModel')
 
+router.get('/', todoModel.getAllTodos)
 
-router.get('/', (req, res) => {
-  res.send('GET request')
-})
-router.post('/', (req, res) => {
-  res.send('POST request')
-})
+router.post('/', todoModel.createNewTodo)
 
+router.put('/:id', todoModel.updateTodo)
+
+router.delete('/:id', todoModel.deleteTodo)
 
 module.exports = router
