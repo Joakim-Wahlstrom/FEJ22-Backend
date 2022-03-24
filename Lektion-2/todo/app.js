@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path')
 const app = express();
-const cors = require('cors')
+// const cors = require('cors')
 
 const todosController = require('./controllers/todosController')
 
@@ -13,7 +13,7 @@ const todosController = require('./controllers/todosController')
 //   }
 //   next()
 // })
-app.use(cors())
+// app.use(cors())
 
 
 app.use(express.json());

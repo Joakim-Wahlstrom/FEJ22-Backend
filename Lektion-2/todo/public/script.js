@@ -8,7 +8,7 @@ const addTodoModal = new bootstrap.Modal(myModal)
 let todos = []
 
 const fetchTodos = async () => {
-  const res = await fetch('http://localhost:8080/api/todos')
+  const res = await fetch('/api/todos')
   const data = await res.json();
 
   todos = data
@@ -59,7 +59,7 @@ const addToggleComplete = todo => {
 }
 
 const toggleTodo = async todo => {
-  const res = await fetch(`http://localhost:8080/api/todos/${todo._id}`, {
+  const res = await fetch(`/api/todos/${todo._id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json; charset=UTF-8'
@@ -79,7 +79,7 @@ const toggleTodo = async todo => {
 }
 
 const deleteTodo = async todo => {
-  const res = await fetch(`http://localhost:8080/api/todos/${todo._id}`, { method: 'DELETE' })
+  const res = await fetch(`/api/todos/${todo._id}`, { method: 'DELETE' })
   if(!res.ok) return
 
   const data = await res.json()
@@ -98,7 +98,7 @@ const deleteTodo = async todo => {
 }
 
 const addNewTodo = async title => {
-  const res = await fetch('http://localhost:8080/api/todos', {
+  const res = await fetch('/api/todos', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json; charset=UTF-8'
