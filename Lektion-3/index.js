@@ -1,3 +1,4 @@
+const { userConnect, userDisconnect } = require('./users')
 const express = require('express');
 const socket = require('socket.io');
 const http = require('http');
@@ -18,7 +19,21 @@ const io = socket(server)
 io.on('connection', socket => {
   
   socket.on('user', userName => {
+    userConnect(socket.id, userName)
     socket.broadcast.emit('user', `${userName} has joined the chat`)
+  })
+
+  socket.on('message', data => {
+    io.sockets.emit('message', data)
+  })
+
+  socket.on('typing', data => {
+    socket.broadcast.emit('typing', `${data} is typing a message...`)
+  })
+
+  socket.on('disconnect', () => {
+    const user = userDisconnect(socket.id)
+    io.emit('user', `${user.userName} has left the chat`)
   })
 
 })

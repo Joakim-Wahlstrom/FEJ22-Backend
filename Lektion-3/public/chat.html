@@ -16,10 +16,10 @@
         <a href="index.html" class="btn btn-primary">Logout</a>
       </header>
 
-      <div class="chat-window">
+      <div class="chat-window" id="chatWindow">
           <div class="messages" id="messages">
 
-            <div class="single-message">
+            <!-- <div class="single-message">
               <p class="single-message_name">namnet på användaren</p>
               <p class="single-message_msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorum!</p>
             </div>
@@ -27,13 +27,13 @@
             <div class="single-message right">
               <p class="single-message_name">namnet på användaren</p>
               <p class="single-message_msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorum!</p>
-            </div>
+            </div> -->
 
             <!-- <p class="inline-feedback">joakim has joined the chat</p> -->
         </div>
       </div>
-      <form id="chat-form" class="chat-form">
-        <div id="feeback" class="d-none"></div>
+      <form id="chatForm" class="chat-form">
+        <div id="feedback" class="d-none"></div>
         <div class="input-group">
           <input type="text" id="chatMessage" class="form-control" placeholder="Enter a message">
           <button id="send" class="btn btn-primary btn-block">Send</button>

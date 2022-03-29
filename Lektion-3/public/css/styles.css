@@ -10,12 +10,16 @@
 .chat-card {
   padding: 1rem 0 2rem 0;
   max-width: 800px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-window {
-  height: 60vh;
+  /* height: 60vh; */
   overflow-y: scroll;
   background-color: var(--clr-chat-bg);
+  flex: 1;
 }
 .messages {
   padding: 0 2rem;
@@ -47,9 +51,16 @@
 }
 
 .input-group {
-  margin: 1rem 2rem 0 2rem;
+  margin: 2rem 2rem 0 2rem;
 }
 
 .inline-feedback {
   color: #6d6d6d;
+}
+
+#feedback {
+  color: #6d6d6d;
+  border-bottom: 1px solid var(--clr-border);
+  padding: .3rem 2rem;
+  background-color: var(--clr-chat-bg);
 }
