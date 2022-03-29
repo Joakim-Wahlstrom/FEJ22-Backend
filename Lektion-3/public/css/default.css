@@ -16,12 +16,14 @@ body {
   padding-inline: 1rem;
 }
 
+.d-none {
+  display: none;
+}
+
 .card {
   margin: 3rem auto;
   background-color: #fff;
-  text-align: center;
   border-radius: var(--border-radius);
-  padding: 2rem 3rem;
   box-shadow: 3px 3px 10px #00000052;
 }
 .form-control {
@@ -29,7 +31,7 @@ body {
   display: block;
   padding: .7rem;
   border-radius: var(--border-radius);
-  border: 1px solid #d3d3d3;
+  border: 1px solid var(--clr-border);
   margin-bottom: 1rem;
 }
 .form-control:focus {
@@ -54,4 +56,20 @@ body {
 .btn-block {
   display: block;
   width: 100%;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+background-color: var(--clr-chat-bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bbbbbb;
+  border-radius: 6px;
+  border: 3px solid var(--clr-chat-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a3a3a3;
 }

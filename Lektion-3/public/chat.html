@@ -8,8 +8,40 @@
   <title>chat</title>
 </head>
 <body>
-  <h1>hej</h1>
-  
+  <div class="container">
+
+    <div class="card chat-card">
+      <header class="chat-header">
+        <p id="me">Joakim</p>
+        <a href="index.html" class="btn btn-primary">Logout</a>
+      </header>
+
+      <div class="chat-window">
+          <div class="messages" id="messages">
+
+            <div class="single-message">
+              <p class="single-message_name">namnet på användaren</p>
+              <p class="single-message_msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorum!</p>
+            </div>
+
+            <div class="single-message right">
+              <p class="single-message_name">namnet på användaren</p>
+              <p class="single-message_msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorum!</p>
+            </div>
+
+            <!-- <p class="inline-feedback">joakim has joined the chat</p> -->
+        </div>
+      </div>
+      <form id="chat-form" class="chat-form">
+        <div id="feeback" class="d-none"></div>
+        <div class="input-group">
+          <input type="text" id="chatMessage" class="form-control" placeholder="Enter a message">
+          <button id="send" class="btn btn-primary btn-block">Send</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>

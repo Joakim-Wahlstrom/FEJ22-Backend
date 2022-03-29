@@ -16,8 +16,9 @@ const io = socket(server)
 
 
 io.on('connection', socket => {
-  console.log('New user connected', socket.id)
-
-  socket.emit('message', 'Välkommen till chatten')
+  
+  socket.on('user', userName => {
+    socket.broadcast.emit('user', `${userName} has joined the chat`)
+  })
 
 })
