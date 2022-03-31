@@ -5,7 +5,7 @@ const userModel = require('../models/users/userModel')
 router.post('/register', userModel.registerUser);
 
 // Login a user
-router.post('/login', userModel.loginUserWithEmailAndPassword)
+router.post('/login', userModel.loginUserWithEmailAndPassword);
 
 
 module.exports = router;

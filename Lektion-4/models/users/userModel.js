@@ -77,6 +77,17 @@ exports.loginUserWithEmailAndPassword = (req, res) => {
         })
       }
 
+      if(!result) {
+        return res.status(401).json({
+          message: 'Incorrect credentials'
+        })
+      }
+
+      res.status(200).json({
+        message: 'Authentication was successful',
+        token: auth.generateToken(user)
+      })
+
     })
   })
 }

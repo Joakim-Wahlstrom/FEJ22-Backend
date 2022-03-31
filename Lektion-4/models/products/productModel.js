@@ -73,7 +73,7 @@ exports.createProduct = (req, res) => {
     .then(data => {
       res.status(201).json({
         message: 'Product created successfully',
-        data
+        data        
       })
     })
     .catch(err => {
